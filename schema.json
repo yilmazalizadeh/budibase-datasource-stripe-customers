@@ -1,0 +1,133 @@
+{
+  "type": "datasource",
+  "metadata": {},
+  "schema": {
+    "docs": "https://stripe.com/docs/api/customers",
+    "friendlyName": "Stripe customers",
+    "type": "API",
+    "description": "Manage Stripe customers",
+    "datasource": {
+      "apiKey": {
+        "type": "password",
+        "required": true
+      }
+    },
+    "query": {
+      "create": {
+        "type": "fields",
+        "fields": {
+          "address": {
+            "type": "object",
+            "required": false
+          },
+          "description": {
+            "type": "string",
+            "required": false
+          },
+          "email": {
+            "type": "string",
+            "required": false
+          },
+          "metadata": {
+            "type": "object",
+            "required": false
+          },
+          "name": {
+            "type": "string",
+            "required": false
+          },
+          "payment_method": {
+            "type": "string",
+            "required": false
+          },
+          "phone": {
+            "type": "string",
+            "required": false
+          },
+          "shipping": {
+            "type": "object",
+            "required": false
+          }
+        }
+      },
+      "read": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          },
+          "email": {
+            "type": "string",
+            "required": false
+          },
+          "ending_before": {
+            "type": "string",
+            "required": false
+          },
+          "limit": {
+            "type": "number",
+            "required": false
+          },
+          "starting_after": {
+            "type": "string",
+            "required": false
+          }
+        }
+      },
+      "update": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          },
+          "address": {
+            "type": "object",
+            "required": false
+          },
+          "description": {
+            "type": "string",
+            "required": false
+          },
+          "email": {
+            "type": "string",
+            "required": false
+          },
+          "metadata": {
+            "type": "object",
+            "required": false
+          },
+          "name": {
+            "type": "string",
+            "required": false
+          },
+          "payment_method": {
+            "type": "string",
+            "required": false
+          },
+          "phone": {
+            "type": "string",
+            "required": false
+          },
+          "shipping": {
+            "type": "object",
+            "required": false
+          }
+        }
+      },
+      "delete": {
+        "type": "fields",
+        "fields": {
+          "id": {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "search": {
+        "type": "sql"
+      }
+    }
+  }
+}
