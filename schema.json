@@ -50,6 +50,12 @@
           }
         }
       },
+      "list":{
+            "limit": {
+            "type": "number",
+            "required": false
+          },
+      }
       "read": {
         "type": "fields",
         "fields": {
