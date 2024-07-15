@@ -29,7 +29,9 @@ class CustomIntegration implements IntegrationBase {
     }
     return await this.stripe.customers.list(query)
   }
-
+  async read(query: { limit: number}) {
+    return await this.stripe.customers.list(query)
+  }
   async update(query: {
     id: string, 
     address: object,
