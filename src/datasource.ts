@@ -30,7 +30,7 @@ class CustomIntegration implements IntegrationBase {
     return await this.stripe.customers.list(query)
   }
   async list(query: { limit: number}) {
-    return await this.stripe.customers.list(query)
+    return await this.stripe.customers.list(query.limit)
   }
   async update(query: {
     id: string, 
